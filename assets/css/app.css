@@ -1,0 +1,11 @@
+body {
+    height: 100vh;
+    background: url("/build/images/maxresdefault.jpg") no-repeat fixed center;
+    background-size: cover;
+    overflow: hidden;
+}
+.home {
+    background: #5493fd;
+    width: 100%;
+    height: 100px;
+}

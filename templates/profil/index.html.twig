@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil{% endblock %}
+
+{% block body %}
+    {% for profil in profils %}
+    <h1>Profil</h1>
+    {% endfor %}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Picture</th>
+                <th>Description</th>
+                <th>Level</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profil in profils %}
+            <tr>
+                <td>{{ profil.name }}</td>
+                <td>{{ profil.picture }}</td>
+                <td>{{ profil.description }}</td>
+                <td>{{ profil.level }}</td>
+                <td>
+                    <button>
+                    <a href="{{ path('profil_edit', {'id': profil.id}) }}">edit</a>
+                    </button>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no profil!</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

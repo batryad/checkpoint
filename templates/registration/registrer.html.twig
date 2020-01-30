@@ -1,0 +1,10 @@
+<p>Welcome</p>
+<img src="{{ asset ('build/images/20090307123740Clouds_over_the_Atlantic_Ocean.jpg') }}" alt="">
+{{ form_start(registrationForm) }}
+
+<div class="errors-block">
+    {{ form_errors(registrationForm.email) }}
+    {{ form_widget(registrationForm.email) }}
+</div>
+
+{{ form_end(registrationForm) }}

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block name %} Welcome  {% endblock %}
+
+
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <div class="home">
+      <button><a href="{{  path('profil_index') }}">Profil</a></button>
+      <button><a href="{{  path('post_index') }}">Post</a></button>
+    <h2>Welcome!</h2>
+    </div>
+{% endblock %}
